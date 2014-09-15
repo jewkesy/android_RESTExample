@@ -49,7 +49,11 @@ public class MyActivity extends ActionBarActivity {
         if (id == R.id.action_refresh) {
             new HttpRequestTask().execute();
             return true;
+        } else if (id == R.id.action_exit) {
+            finish();
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
